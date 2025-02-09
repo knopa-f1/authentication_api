@@ -1,1 +1,1 @@
-web: gunicorn api.wsgi --log-file -
+web: cd project_api && gunicorn api.wsgi:application --bind 0.0.0.0:$POR
