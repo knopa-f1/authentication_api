@@ -5,7 +5,7 @@ import datetime
 
 import uuid
 
-from rest_framework.exceptions import AuthenticationFailed, ValidationError, NotFound
+from rest_framework.exceptions import AuthenticationFailed, NotFound
 from rest_framework_simplejwt.tokens import AccessToken
 
 
@@ -34,7 +34,6 @@ class TokenService:
             raise e
 
         return True
-
 
     @staticmethod
     def generate_access_token(user):
@@ -69,7 +68,3 @@ class TokenService:
             'refresh_token': refresh_token,
             'access_token': str(access_token)
         }
-
-
-
-

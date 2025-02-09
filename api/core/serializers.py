@@ -1,16 +1,8 @@
-import uuid
-from datetime import datetime, timedelta
-
-from rest_framework_simplejwt.tokens import RefreshToken
+from datetime import timedelta
 
 from .services.token_service import TokenService
 from constance import config
-from django.utils import timezone
 from typing import Dict, Any
-
-from rest_framework_simplejwt.settings import api_settings
-
-from .models import UserRefreshToken
 
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
